@@ -82,7 +82,7 @@
             <div class="content">
                 <div class="title m-b-md">
                   Dulce Maria Sevilla Ortiz Laravel 
-                </div>
+                </div> 
 
 
                 <div class="links">
