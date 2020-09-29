@@ -7,5 +7,6 @@
     <h1>Mi Primer Layout Laravel  </h1>
       
     <h2>Dulce Maria Sevilla Ortiz</h2>
-
+    </div>
+</div>
 @endsection
