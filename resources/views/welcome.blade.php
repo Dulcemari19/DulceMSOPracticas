@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('title', 'Home')
-@section('content')}
+@section('content')
 <div class="container">
     <div class="row">
         <h1>Bienvenido a MiLaravel</h1>
