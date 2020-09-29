@@ -16,6 +16,11 @@ Route::get('/', function () {
 });
 Route::get('Hellowordl ', function() {
     return view('hellowordl'); 
-
-
 });
+
+
+Route::get('miprimer_layout_laravel', function() {
+    return View::make('miprimer_layout_laravel'); 
+});
+
+
