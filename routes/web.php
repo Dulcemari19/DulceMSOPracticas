@@ -23,4 +23,6 @@ Route::get('miprimer_layout_laravel', function() {
     return View::make('miprimer_layout_laravel'); 
 });
 
+Route::resource('/Hellowordl', 'controllers\Hellowordl'); 
+
 
