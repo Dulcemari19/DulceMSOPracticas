@@ -8,6 +8,8 @@ use Illuminate\Http\Request;
 use App\Materias;
 //Importar  request
 use App\Http\Requests\Materias as MateriaRequests;
+use App\Http\Requests\MateriasDMS;
+use App\Http\Requests\MateriasS;
 
 class MateriasController extends Controller
 {
@@ -47,11 +49,11 @@ class MateriasController extends Controller
     public function store(MateriaRequests $request)
     {
         //
-      //  return $request;
+        //return $request;
         $materia =$this->materia->create($request->all());
         return response()->json($materia);
        // return $materia;
-      //  return response()->json(new MateriasS($materia), 201);
+        //return response()->json(new MateriasDMS($materia), 201);
     }
 
     /**
@@ -95,8 +97,10 @@ class MateriasController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Materias $materia)
     {
         //
+        $materia->delete();
+        return response()->json();
     }
 }
