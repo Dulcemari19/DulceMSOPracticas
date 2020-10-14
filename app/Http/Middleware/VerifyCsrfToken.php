@@ -20,5 +20,7 @@ class VerifyCsrfToken extends Middleware
      */
     protected $except = [
         //
+        //agregamos api para evitar que nos mande el crt
+        'api/*'
     ];
 }

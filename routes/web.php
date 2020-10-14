@@ -23,6 +23,13 @@ Route::get('miprimer_layout_laravel', function() {
     return View::make('miprimer_layout_laravel'); 
 });
 
-Route::resource('/Hellowordl', 'controllers\Hellowordl'); 
+Route::resource('/Helloworld', 'Materias\controllerMaterias'); 
 
+//Rotus Materias
+Route::get('/miprimerarray', 'Materias\controllerMaterias@getAlumnos')->name('alumno');
+//Configuramos el prefix con un grupo de rutas para quitar el /api de la ruta
+Route::group(['prefix'=>'api'], function(){
+    Route::apiResource('materias', 'Materias\MateriasController');
+    //Route::apiResource('alumno', 'controllerAlumnos@store');
+});
 
