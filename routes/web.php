@@ -31,5 +31,6 @@ Route::get('/miprimerarray', 'Materias\controllerMaterias@getAlumnos')->name('al
 Route::group(['prefix'=>'api'], function(){
     Route::apiResource('materias', 'Materias\MateriasController');
     //Route::apiResource('alumno', 'controllerAlumnos@store');
+    Route::apiResource('alumno', 'controllerAlumnos@store');
 });
 

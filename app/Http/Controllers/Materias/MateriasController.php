@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Materias;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+<<<<<<< HEAD
 //Mandar a llamar el modelo
 use App\Materias;
 //request 
@@ -25,6 +26,31 @@ class MateriasController extends Controller
         
         //retorna el array en formato json
     // return response()->json(['materias'=> $materias]);
+=======
+//importar nuestro modelo a ocupar
+use App\Materias;
+
+class MateriasController extends Controller
+{
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+
+    // funcion index sirve para listar todos los productos del sistema
+    public function index()
+    {
+        //ELOQUEN DE LARAVEL
+        //SELECT * FROM MATERIAS;
+        //ES COMO SI FUERA UNA COSULTA.
+
+        //Declaramos la variable de la materia /Modelo llamado materia
+        $materias = Materias::all();
+        
+        //retorna el array en formato json
+        //return response()->json(['materias'=> $materias]);
+>>>>>>> 1f07e63cb1d85aa687b49b34dd4084c72067f844
         return $materias;
     }
 
@@ -44,6 +70,7 @@ class MateriasController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
+<<<<<<< HEAD
     public function store(MateriaRequests $request)
     {
         //
@@ -52,6 +79,13 @@ class MateriasController extends Controller
         return response()->json($materia);
        // return $materia;
       //  return response()->json(new MateriasS($materia), 201);
+=======
+    public function store(Request $request)
+    {
+        //
+        $materia = create::all($request);
+        return ('el registro materia se a guardado con exito');
+>>>>>>> 1f07e63cb1d85aa687b49b34dd4084c72067f844
     }
 
     /**
@@ -62,6 +96,10 @@ class MateriasController extends Controller
      */
     public function show($id)
     {
+<<<<<<< HEAD
+=======
+        //
+>>>>>>> 1f07e63cb1d85aa687b49b34dd4084c72067f844
         $materia = Materias::find($id);
         return $materia;
     }
@@ -99,4 +137,5 @@ class MateriasController extends Controller
     {
         //
     }
+}
 }
